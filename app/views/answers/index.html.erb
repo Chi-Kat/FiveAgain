@@ -1,0 +1,17 @@
+<div id="mainContent">
+
+  <ol>
+      <li><%= link_to 'Click to answer', new_answer_path %></li>
+    <% @answers.each do |answer| %>
+      <li><p><%= answer.description %></p>
+      <span id="count"><%= answer.votes %> Likes</span>
+      <%= button_to "Like", vote_answer_path(answer.id)%>
+      </li>
+    <% end %>
+  </ol>
+
+</div>
+
+
+
+
